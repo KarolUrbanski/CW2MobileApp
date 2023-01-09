@@ -6,7 +6,7 @@
 }
 
 .lesson-box {
-    height: 50px;
+    height: 45px;
     display: flex;
     flex-direction: column;
     align-items: left;
