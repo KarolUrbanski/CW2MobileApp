@@ -6,6 +6,8 @@ const app = express();
 //Set up express to serve static files from the directory called 'public'
 app.use(express.static("public"));
 
+//Status codes defined in external file
+require('./http_status.js');
 
 app.get("/lessons", lessons); //
 
