@@ -27,13 +27,13 @@
             data: {
                 lessons: [],
             },
-            mounted() {
-                fetch('http://localhost:8080/lessons')
-                    .then(response => response.json())
-                    .then(json => {
-                        this.lessons = json;
-                    });
-            },
+            created: function () {
+                fetch("http://localhost:8080/lessons").then(
+                    function (response) {
+                        response.json().then(function (json) { app.lessons = json; })
+                    }
+                )
+            }
         });
     </script>
 </body>
