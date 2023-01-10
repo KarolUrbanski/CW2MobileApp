@@ -28,7 +28,7 @@
                 lessons: [],
             },
             created: function () {
-                fetch("/lessons").then(
+                fetch("/data.js").then(
                     function (response) {
                         response.json().then(function (json) { app.lessons = json; })
                     }
