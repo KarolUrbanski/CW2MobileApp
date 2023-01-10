@@ -28,7 +28,7 @@
                 lessons: [],
             },
             created: function () {
-                fetch("http://localhost:8080/lessons").then(
+                fetch("/lessons").then(
                     function (response) {
                         response.json().then(function (json) { app.lessons = json; })
                     }
