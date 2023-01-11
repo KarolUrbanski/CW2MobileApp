@@ -1,6 +1,6 @@
-//Import the express, body-parser and express-session modules
+//Import the express
 const express = require("express");
-//Create express app and configure it with body-parser
+//Create express app 
 const app = express();
 
 //Set up express to serve static files from the directory called 'public'
@@ -9,6 +9,7 @@ app.use(express.static("public"));
 //Status codes defined in external file
 require('./http_status.js');
 
+//response with lessons data
 app.get('/lessons', (req, res) => {
     const lessons = [
         { topic: 'math', location: 'hendon', price: 100 },
@@ -18,12 +19,13 @@ app.get('/lessons', (req, res) => {
     ];
     res.json(lessons);
 });
-
+//response with user data
 app.get('/user', (req, res) => {
     const user = {
         email: 'user@email.com',
         password: 'mypassword',
     };
+    //change the user to json
     res.json(user);
 });
 
